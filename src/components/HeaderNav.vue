@@ -7,41 +7,45 @@ export default {
       menus: [
         {
           path: '/',
-          name: '소개',
+          name: 'nav.menu1',
         },
         {
           path: '/start',
-          name: '시작하기',
+          name: 'nav.menu2',
         },
         {
           path: '/pikavue',
-          name: 'Pikavue 사용하기',
+          name: 'nav.menu3',
         },
       ],
       lang: false,
-      ko: false,
-      en: false,
+      selected: '',
+      langSet: {
+        'ko': "한국어",
+        "en": "English"
+      },
       subMenu: false,
     };
   },
+  props : {
+    scroll : Number
+  },
   mounted() {
-    this.langSet();
+    this.initLoc()
   },
   methods: {
     isActive(idx) {
       return this.menus[idx].path[1] === this.$route.path[1];
     },
-    langSet() {
-      if (this.$i18n.locale == 'ko') {
-        this.ko = true;
-      } else {
-        this.ko = false;
-      }
-      if (this.$i18n.locale == 'en-US') {
-        this.en = true;
-      } else {
-        this.en = false;
-      }
+    initLoc() {
+      this.selected = this.$store.getters.readLang.substr(0, 2);
+    },
+    setLoc(locale) {
+      this.$store.commit('saveLang', locale);
+      this.initLoc();
+      // this.$i18n.global.locale.value = locale;
+      this.lang = false;
+      // location.reload();
     },
   },
 };
@@ -53,29 +57,29 @@ export default {
       <ul>
         <li v-for="(menu, idx) in menus" :key="idx" :class="{ active: isActive(idx) }">
           <router-link :to="menu.path">
-            <p>{{ menu.name }}</p>
+            <p>{{ $t( menu.name ) }}</p>
           </router-link>
         </li>
         <li class="pikavue">
-          <span>가이드 확인하기</span>
-          <span>업로드하기</span>
-          <span>Pikavue AI Image Guide</span>
-          <span>Pikavue AI Video Guide</span>
-          <span>삭제하기</span>
+          <span :class="{ active: scroll > 200 && scroll < 850 }" @click="$emit('event1')">{{ $t( 'nav.guide1' ) }}</span>
+          <span :class="{ active: scroll > 850 && scroll < 1250 }" @click="$emit('event2')">{{ $t( 'nav.guide2' ) }}</span>
+          <span :class="{ active: scroll > 1250 && scroll < 2500 }" @click="$emit('event3')">{{ $t( 'nav.guide3' ) }}</span>
+          <span :class="{ active: scroll > 2500 && scroll < 3800 }" @click="$emit('event4')">{{ $t( 'nav.guide4' ) }}</span>
+          <span :class="{ active: scroll > 3800 }" @click="$emit('event5')">{{ $t( 'nav.guide5' ) }}</span>
         </li>
       </ul>
       <div class="lang">
         <div class="title" @click="lang = !lang">
           <i class="ri-global-line"></i>
-          <p>Languages</p>
+          <p>{{ $t( 'nav.lang' ) }}</p>
         </div>
 
         <Transition>
           <div v-if="lang" class="langPop">
-            <p :class="ko ? 'active' : ''" @click="[($i18n.locale = 'ko'), langSet()]">
+            <p :class="selected === 'ko' ? 'active' : ''" @click="[( $i18n.locale='ko' ), setLoc('ko')]">
               한국어
             </p>
-            <p :class="en ? 'active' : ''" @click="[($i18n.locale = 'en-US'), langSet()]">
+            <p :class="selected === 'en' ? 'active' : ''" @click="[( $i18n.locale='en' ),setLoc('en')]">
               English
             </p>
           </div>
@@ -105,15 +109,15 @@ export default {
         <ul v-if="subMenu">
           <li v-for="(menu, idx) in menus" :key="idx" :class="{ active: isActive(idx) }">
             <router-link :to="menu.path">
-              <p>{{ menu.name }}</p>
+              <p>{{ $t( menu.name ) }}</p>
             </router-link>
           </li>
           <li class="bottomMenu">
-            <button v-if="$i18n.locale === 'en-US'" @click="[($i18n.locale = 'ko'), langSet()]">
-              <i class="ri-global-line"></i> 한국어
+            <button v-if="selected === 'en'" :class="selected === 'ko' ? 'active' : ''" @click="[( $i18n.locale='ko' ), setLoc('ko')]">
+              <i class="ri-global-line"></i> {{ $t('nav.ko') }}
             </button>
-            <button v-if="$i18n.locale === 'ko'" @click="[($i18n.locale = 'en-US'), langSet()]">
-              <i class="ri-global-line"></i> English
+            <button v-if="selected === 'ko'" :class="selected === 'en' ? 'active' : ''" @click="[( $i18n.locale='en' ),setLoc('en')]">
+              <i class="ri-global-line"></i> {{ $t('nav.en') }}
             </button>
             <p>1.0 version</p>
           </li>

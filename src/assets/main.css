@@ -93,6 +93,9 @@ h2, h3, h4, h5, ul, li, p{
   margin: 0;
   padding: 0;
 }
+h2, h3, h4, h5, span{
+  text-transform: capitalize;
+}
 ul{list-style: none;}
 h2{
   font-size: 52px;
@@ -159,6 +162,7 @@ button:hover{
 .content{
   margin: 120px 0 0 380px;
   padding-right: 80px;
+  white-space: pre-line;
 }
 
 .v-enter-active,
@@ -306,6 +310,9 @@ header .leftMenu .lang .langPop p.active{
   margin-left: 25px;
   transition: 0.25s;
   cursor: pointer;
+}
+.leftMenu .pikavue span.active{
+  color: var(--blue);
 }
 .leftMenu .pikavue span:hover{
   color: var(--blue);

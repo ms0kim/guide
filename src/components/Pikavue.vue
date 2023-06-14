@@ -1,31 +1,65 @@
-<script setup>
+<script>
 import HeaderNav from './HeaderNav.vue';
+
+export default {
+  data() {
+    return {
+      scrollPosition: null,
+    }
+  },
+  components: {
+    HeaderNav
+  },
+  mounted() {
+    window.addEventListener('scroll', this.updateScroll);
+  },
+  methods: {
+    updateScroll() {
+      this.scrollPosition = window.scrollY;
+    },
+    goScroll1() {
+      this.$refs.scroll1.scrollIntoView({ befavior: "smooth" })
+    },
+    goScroll2() {
+      this.$refs.scroll2.scrollIntoView({ befavior: "smooth" })
+    },
+    goScroll3() {
+      this.$refs.scroll3.scrollIntoView({ befavior: "smooth" })
+    },
+    goScroll4() {
+      this.$refs.scroll4.scrollIntoView({ befavior: "smooth" })
+    },
+    goScroll5() {
+      this.$refs.scroll5.scrollIntoView({ befavior: "smooth" })
+    }
+  },
+}
 </script>
 
 <template>
-  <HeaderNav />
+  <HeaderNav :scroll="scrollPosition" @event1="goScroll1" @event2="goScroll2" @event3="goScroll3" @event4="goScroll4" @event5="goScroll5"/>
   <div class="content">
-    <h4>Pikavue 사용하기</h4>
+    <h4 @click="goScroll">{{ $t( 'pikavue.title' ) }}</h4>
     <img src="../assets/media/imageview.jpg" alt="" />
+    <div ref="scroll1"></div>
     <div class="solid"></div>
-    <h4>가이드 확인하기</h4>
+    <h4>{{ $t( 'pikavue.guide' ) }}</h4>
     <img src="../assets/media/guidebtn.png" id="btn" alt="" />
     <p>
-      Pikavue AI Image, Pikavue AI Video 메뉴에 처음 접속하면 가이드를 확인할 수
-      있습니다.<br />
-      업로드하기 버튼 옆의 <b>가이드 확인하기 버튼을 클릭</b>하면 언제든지 다시
-      확인할 수 있습니다.
+      {{ $t( 'pikavue.guide_text' ) }}
+      <b>{{ $t( 'pikavue.guide_text_bold' ) }}</b>
     </p>
+    <div ref="scroll2"></div>
     <div class="solid"></div>
-    <h4>업로드하기</h4>
+    <h4>{{ $t( 'pikavue.upload' ) }}</h4>
     <img src="../assets/media/upbtn.png" id="btn" alt="" />
     <p>
-      업로드하기 버튼을 누른 후 이미지를 업로드 해주세요.<br />
-      준비된 필터를 취향에 맞게 사용 후 최종 업로드를 해줍니다.<br />
-      더 자세한 내용은 <b>아래의 가이드를 참고</b>해주세요.
+      {{ $t( 'pikavue.upload_text' ) }}
+      <b>{{ $t( 'pikavue.upload_text_bold' ) }}</b>
     </p>
+    <div ref="scroll3"></div>
     <div class="solid"></div>
-    <h4>Pikavue AI Image Guide</h4>
+    <h4>{{ $t( 'pikavue.image' ) }}</h4>
     <div class="imgs">
       <img src="../assets/media/01.png" alt="" />
       <img src="../assets/media/02.png" alt="" />
@@ -34,8 +68,9 @@ import HeaderNav from './HeaderNav.vue';
       <img src="../assets/media/03.png" alt="" />
       <img src="../assets/media/04.png" alt="" />
     </div>
+    <div ref="scroll4"></div>
     <div class="solid"></div>
-    <h4>Pikavue AI Video Guide</h4>
+    <h4>{{ $t( 'pikavue.video' ) }}</h4>
     <div class="imgs">
       <img src="../assets/media/01.png" alt="" />
       <img src="../assets/media/05.png" alt="" />
@@ -44,20 +79,19 @@ import HeaderNav from './HeaderNav.vue';
       <img src="../assets/media/03.png" alt="" />
       <img src="../assets/media/06.png" alt="" />
     </div>
+    <div ref="scroll5"></div>
     <div class="solid"></div>
-    <h4>삭제하기</h4>
+    <h4>{{ $t( 'pikavue.delete' ) }}</h4>
     <img src="../assets/media/imgbtn.png" id="img" alt="" />
     <p class="pbr">
-      이미지 또는 동영상 리스트의 왼쪽 상단에 있는 <b>체크 버튼</b>을
-      클릭하여<br />
-      선택하고 싶은 파일을 선택할 수 있습니다.
+      {{ $t( 'pikavue.delete_text' ) }}
+      <b>{{ $t( 'pikavue.delete_text_bold' ) }}</b>
+      {{ $t( 'pikavue.delete_text2' ) }}
     </p>
     <img src="../assets/media/allbtn.png" id="btn" alt="" />
     <img src="../assets/media/delbtn.png" id="btn" alt="" />
     <p>
-      전체선택 버튼을 클릭하여 한 페이지에 있는 전체 파일을 선택할 수
-      있습니다.<br />
-      원하는 파일을 선택 후 삭제하기 버튼을 누르면 삭제할 수 있습니다.
+      {{ $t( 'pikavue.delete_text3' ) }}
     </p>
   </div>
 </template>
