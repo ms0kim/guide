@@ -21,7 +21,7 @@ const router = createRouter({
       name: 'pikavue',
       component: Pikavue
     }
-  ]
+  ],
 })
 
 export default router

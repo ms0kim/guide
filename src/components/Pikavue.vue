@@ -39,7 +39,7 @@ export default {
 <template>
   <HeaderNav :scroll="scrollPosition" @event1="goScroll1" @event2="goScroll2" @event3="goScroll3" @event4="goScroll4" @event5="goScroll5"/>
   <div class="content">
-    <h4 @click="goScroll">{{ $t( 'pikavue.title' ) }}</h4>
+    <h4>{{ $t( 'pikavue.title' ) }}</h4>
     <img src="../assets/media/imageview.jpg" alt="" />
     <div ref="scroll1"></div>
     <div class="solid"></div>
@@ -76,8 +76,8 @@ export default {
       <img src="../assets/media/05.png" alt="" />
     </div>
     <div class="imgs">
-      <img src="../assets/media/03.png" alt="" />
       <img src="../assets/media/06.png" alt="" />
+      <img src="../assets/media/07.png" alt="" />
     </div>
     <div ref="scroll5"></div>
     <div class="solid"></div>

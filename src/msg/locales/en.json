@@ -3,41 +3,41 @@
     "menu1": "Intro",
     "menu2": "Get Started",
     "menu3": "Using Pikavue",
-    "guide1": "Check the guide",
+    "guide1": "Check The Guide",
     "guide2": "Upload",
-    "guide3": "Pikavue AI image guide",
-    "guide4": "Pikavue AI video guide",
+    "guide3": "Pikavue AI Image Guide",
+    "guide4": "Pikavue AI Video Guide",
     "guide5": "Delete",
-    "lang": "언어선택",
+    "lang": "Languages",
     "ko": "Korean",
     "en": "English"
   },
   "home": {
     "title": "Introducing the GDF Platform",
-    "text": "The GDF platform is a platform service that combines GDF Lab's innovative AI technologies.\nThe representative AI technology improves low-resolution frames to high-definition images\nTechnologies that can solve network problems through real-time streaming We have it.\nThis service allows users to use it conveniently\n",
+    "text": "The GDF platform is a platform service that combines GDFLab's innovative AI technologies.\nThe representative AI technology improves low-resolution images\nand videos to high-definition images and videos.\nTechnologies that can solve network problems through real-time streaming and\nimproves Video quality in real time in possible with our GDFPlay.\nThis service allows users to stream high quality videos conveniently\n",
     "textBold": "We started the GDF platform to share AI innovation.",
-    "sub": "Introductory menu",
-    "subText": "Currently, PeekaView AI image and video services are available on the GDF platform\nG-Enhancer and GDF Play are connected via external links.\nWe will try to open other services as soon as possible. "
+    "sub": "Introductory Menu",
+    "subText": "Currently, Pikavue AI image and video services are available on the GDF platform\nG-Enhancer and GDFPlay are connected via external links.\nWe will try to open other services as soon as possible. "
   },
   "start": {
-    "title": "Get started",
-    "text": "Check the image or video that can represent the service on the main screen\nSelect the desired menu to use the service.\nOf the menu image",
+    "title": "Get Started",
+    "text": "Check the images or videos that represent the service on the main screen\nSelect the desired menu to use the service.\nFrom the menu image",
     "textBold": "You can move the white bar left or right to compare before and after using the service."
   },
   "pikavue": {
     "title": "Using Pikavue",
-    "guide": "Check the guide",
-    "guide_text": "You can see the guide the first time you access the PeekaView AI Image, PeekaView AI Video menu.\nNext to the Upload button",
-    "guide_text_bold": "You can revisit the guide at any time by clicking the Check out button.",
+    "guide": "Check The Guide",
+    "guide_text": "You can see the guide the first time you access Pikavue AI Image, Pikavue AI Video menu.\nNext to the Upload button",
+    "guide_text_bold": "You can revisit the guide at any time by clicking the Guidelines button.",
     "upload": "Upload",
     "upload_text": "Click the Upload button and upload your image.\nUse the prepared filters to your liking before final upload.\nFor more information",
     "upload_text_bold": "Please refer to the guide below.",
     "image": "Pikavue AI image guide",
     "video": "Pikavue AI video guide",
     "delete": "Delete",
-    "delete_text": "At the top left of the image or video list",
+    "delete_text": "At the top left of the image or video list, Click",
     "delete_text_bold": "Check button",
-    "delete_text2": "Click\nyou can select the file you want to select.",
+    "delete_text2": "\nyou can select the file you want to select.",
     "delete_text3": "You can select all files on a page by clicking the Select All button.\nSelect the files you want and click the Delete button to delete them."
   }
 }

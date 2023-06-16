@@ -63,6 +63,7 @@
 *{
   font-family: 'Outfit', 'Pretendard';
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 body{
   margin: 0;
