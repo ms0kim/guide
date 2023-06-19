@@ -605,6 +605,8 @@ header .leftMenu .lang .langPop p.active{
     width: 100%;
     display: block;
     position: fixed;
+    top: 0;
+    left: 0;
     z-index: 999;
   }
   .mobileMenu .logo{

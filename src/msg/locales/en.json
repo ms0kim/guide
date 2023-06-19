@@ -9,12 +9,12 @@
     "guide4": "Pikavue AI Video Guide",
     "guide5": "Delete",
     "lang": "Languages",
-    "ko": "Korean",
+    "ko": "한국어",
     "en": "English"
   },
   "home": {
     "title": "Introducing the GDF Platform",
-    "text": "The GDF platform is a platform service that combines GDFLab's innovative AI technologies.\nThe representative AI technology improves low-resolution images\nand videos to high-definition images and videos.\nTechnologies that can solve network problems through real-time streaming and\nimproves Video quality in real time in possible with our GDFPlay.\nThis service allows users to stream high quality videos conveniently\n",
+    "text": "The GDF platform is a platform service that combines\nGDFLab's innovative AI technologies. The representative AI technology improves\nlow-resolution images and videos to high-definition images and videos.\nTechnologies that can solve network problems through real-time streaming and\nimproves Video quality in real time is possible with our GDFPlay.\nThis service allows users to stream high quality videos conveniently\n",
     "textBold": "We started the GDF platform to share AI innovation.",
     "sub": "Introductory Menu",
     "subText": "Currently, Pikavue AI image and video services are available on the GDF platform\nG-Enhancer and GDFPlay are connected via external links.\nWe will try to open other services as soon as possible. "

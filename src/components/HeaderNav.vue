@@ -114,10 +114,10 @@ export default {
           </li>
           <li class="bottomMenu">
             <button v-if="selected === 'en'" :class="selected === 'ko' ? 'active' : ''" @click="[( $i18n.locale='ko' ), setLoc('ko')]">
-              <i class="ri-global-line"></i> {{ $t('nav.ko') }}
+              <i class="ri-global-line"></i> {{ $t('nav.en') }}
             </button>
             <button v-if="selected === 'ko'" :class="selected === 'en' ? 'active' : ''" @click="[( $i18n.locale='en' ),setLoc('en')]">
-              <i class="ri-global-line"></i> {{ $t('nav.en') }}
+              <i class="ri-global-line"></i> {{ $t('nav.ko') }}
             </button>
             <p>1.0 version</p>
           </li>
