@@ -628,6 +628,14 @@ header .leftMenu .lang .langPop p.active{
     font-size: 20px;
     color: var(--blue);
   }
+  .mobileMenu .logo .back{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    font-size: 25px;
+    font-weight: 400;
+  }
   .mobileMenu .logo img{
     width: 20px;
     margin-right: 10px;

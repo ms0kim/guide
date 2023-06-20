@@ -99,6 +99,7 @@ export default {
 
     <div class="mobileMenu">
       <div class="logo">
+        <p onclick="history.back()"><i class="ri-arrow-left-s-line back"></i></p>
         <p>
           <img src="../assets/media/gdflogo.svg" alt="" />GDF Platform Guide
         </p>
