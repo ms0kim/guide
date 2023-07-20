@@ -60,7 +60,7 @@ export default {
             <p>{{ $t( menu.name ) }}</p>
           </router-link>
         </li>
-        <li class="pikavue">
+        <li v-show="$route.path==='/pikavue'" class="pikavue">
           <span :class="{ active: scroll > 200 && scroll < 850 }" @click="$emit('event1')">{{ $t( 'nav.guide1' ) }}</span>
           <span :class="{ active: scroll > 850 && scroll < 1250 }" @click="$emit('event2')">{{ $t( 'nav.guide2' ) }}</span>
           <span :class="{ active: scroll > 1250 && scroll < 2500 }" @click="$emit('event3')">{{ $t( 'nav.guide3' ) }}</span>
